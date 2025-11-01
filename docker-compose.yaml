@@ -2,8 +2,10 @@ services:
 
     dashy:
         image: lissy93/dashy:latest  
-        container_name: my-dashboard              
+        container_name: dashy
+        environment:
+            - NODE_ENV=production
         ports:
-            - "8200:80"
-        restart: unless-stopped     
+            - "8200:8080"
+        restart: unless-stopped
        
